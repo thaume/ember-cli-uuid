@@ -3,14 +3,15 @@ import uuid from 'uuid';
 
 export default {
 
-  name: 'authentication-setup',
-  before: 'simple-auth',
+  name: 'ember-cli-uuid',
 
   initialize: function () {
 
-    DS.RESTAdapter.reopen({
+    console.log('adapter: ', DS);
+    DS.adapter.reopen({
 
       generateIdForRecord: function () {
+        console.log('GENERATE');
         return uuid.v4();
       }
 

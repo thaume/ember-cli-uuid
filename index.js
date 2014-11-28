@@ -19,6 +19,10 @@ module.exports = {
         'uuid': ['default']
       }
     });
+  },
+
+  afterInstall: function() {
+    console.log('INSTALLED');
   }
 
 };
