@@ -7,8 +7,8 @@ export default {
 
   initialize: function () {
 
-    console.log('uuid: ', uuid);
-    DS.RESTAdapter.reopen({
+    console.log('Adapter');
+    DS.Adapter.reopen({
 
       generateIdForRecord: function () {
         return uuid();
