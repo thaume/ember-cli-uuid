@@ -2,7 +2,6 @@
   "name": "ember-cli-uuid",
   "version": "0.0.1",
   "directories": {
-    "doc": "doc",
     "test": "tests"
   },
   "scripts": {
@@ -10,11 +9,11 @@
     "build": "ember build",
     "test": "ember test"
   },
-  "repository": "https://github.com/stefanpenner/ember-cli",
+  "repository": "https://github.com/thaume/ember-cli-uuid",
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "",
+  "author": "Tom Coquereau <tom@thau.me>",
   "license": "MIT",
   "devDependencies": {
     "body-parser": "^1.2.0",
@@ -31,7 +30,8 @@
     "glob": "^4.0.5"
   },
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "uuid"
   ],
   "ember-addon": {
     "configPath": "tests/dummy/config"
