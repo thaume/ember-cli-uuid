@@ -1,5 +1,5 @@
-import DS from 'ember-data';
-import uuid from 'uuid';
+import Ember from 'ember';
+import uuid from 'ember-cli-uuid/utils/uuid-helpers';
 
 export default {
 
@@ -7,12 +7,11 @@ export default {
 
   initialize: function () {
 
-    console.log('adapter: ', DS);
-    DS.adapter.reopen({
+    console.log('uuid: ', uuid);
+    DS.RESTAdapter.reopen({
 
       generateIdForRecord: function () {
-        console.log('GENERATE');
-        return uuid.v4();
+        return uuid();
       }
 
     });
