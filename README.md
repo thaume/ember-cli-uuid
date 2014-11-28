@@ -1,25 +1,21 @@
-# Ember-cli-uuid
+## Ember CLI UUID
 
-This README outlines the details of collaborating on this Ember addon.
+This is an npm package that contains the Ember CLI uuid generator for Ember-Data
+library, packaged as an [Ember CLI](https://github.com/stefanpenner/ember-cli)
+Addon.
 
 ## Installation
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
+**Ember CLI UUID requires at least Ember CLI 0.0.44.**
 
-## Running
+To install simply run
 
-* `ember server`
-* Visit your app at http://localhost:4200.
+```
+npm install --save-dev ember-cli-uuid
+ember generate ember-cli-uuid
+```
 
-## Running Tests
+in your Ember CLI project's root.
 
-* `ember test`
-* `ember test --server`
-
-## Building
-
-* `ember build`
-
-For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
+This will add a hook to your RESTAdapter to generate the id of each record you
+create.
