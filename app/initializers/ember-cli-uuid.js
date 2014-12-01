@@ -7,7 +7,6 @@ export default {
 
   initialize: function () {
 
-    console.log('Adapter');
     DS.Adapter.reopen({
 
       generateIdForRecord: function () {
