@@ -17,5 +17,5 @@ ember generate ember-cli-uuid
 
 in your Ember CLI project's root.
 
-This will add a hook to your RESTAdapter to generate the id of each record you
+This will add a hook to your Adapter (and all adapters extended from DS.Adapter) to generate the id of each record you
 create.
