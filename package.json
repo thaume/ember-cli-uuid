@@ -31,6 +31,9 @@
   },
   "keywords": [
     "ember-addon",
+    "client-side",
+    "ids",
+    "id",
     "uuid"
   ],
   "ember-addon": {
