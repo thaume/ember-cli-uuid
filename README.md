@@ -14,6 +14,8 @@ Ember CLI >= 0.2.3
 ember install ember-cli-uuid
 ```
 
+in your Ember CLI project's root.
+
 If you run with Ember CLI >= 0.1.5 && < 0.2.3, you can run:
 
 ```
