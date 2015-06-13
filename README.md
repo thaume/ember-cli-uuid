@@ -8,13 +8,19 @@ This addon adds a hook to your Adapter (and all adapters extended from DS.Adapte
 
 ## Installation
 
-If you run with Ember CLI >= 0.1.5, you just need to run:
+Ember CLI >= 0.2.3, run
+
+```
+ember install ember-cli-uuid
+```
+
+in your Ember CLI project's root.
+
+**If you run with Ember CLI >= 0.1.5 && < 0.2.3**
 
 ```
 ember install:addon ember-cli-uuid
 ```
-
-in your Ember CLI project's root.
 
 **If you run with Ember CLI >= 0.0.44 && < 0.1.5**
 
@@ -22,5 +28,3 @@ in your Ember CLI project's root.
 npm install --save-dev ember-cli-uuid
 ember generate ember-cli-uuid
 ```
-
-in your Ember CLI project's root.
