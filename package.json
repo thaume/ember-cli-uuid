@@ -1,7 +1,7 @@
 {
   "name": "ember-cli-uuid",
   "version": "0.2.1",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "Auto UUIDs for your Ember Data models' primary key.",
   "directories": {
     "doc": "doc",
     "test": "tests"
