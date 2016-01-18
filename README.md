@@ -1,6 +1,8 @@
 ## Ember CLI UUID
 
-This addon adds a hook to your Ember Data Adapter (and all adapters extended from DS.Adapter) to generate the id of each record you create on the client-side. 
+[![Build Status](https://travis-ci.org/thaume/ember-cli-uuid.svg?branch=master)](https://travis-ci.org/thaume/ember-cli-uuid)
+
+This addon adds a hook to your Ember Data Adapter (and all adapters extended from DS.Adapter) to generate the id of each record you create on the client-side.
 
 The created ids are v4 UUIDs which are random "enough", quoting wikipedia:
 
