@@ -1,10 +1,10 @@
 ## Ember CLI UUID
 
+This addon adds a hook to your Ember Data Adapter (and all adapters extended from DS.Adapter) to generate the id of each record you create on the client-side.
+
 This is an npm package that contains the Ember CLI uuid generator for Ember-Data
 library, packaged as an [Ember CLI](https://github.com/stefanpenner/ember-cli)
 Addon.
-
-This addon adds a hook to your Adapter (and all adapters extended from DS.Adapter) to generate the id of each record you create on the client-side.
 
 ## Installation
 
@@ -30,6 +30,20 @@ ember generate ember-cli-uuid
 ```
 
 ## Usage
+
+This Ember CLI module is intended for use with Ember Data. Once you install it (and the blueprint is applied) your ember data models will get a new behaviour when being created on the client-side. When creating a model like that :
+
+```
+store.createRecord('post', {
+  title: 'My post'
+});
+```
+
+Your model will get a v4 (random) UUID as his primary key
+
+### Direct usage
+You can also (if you need a UUID somewhere in your app) use it like that :
+
 ```
 import uuid from "ember-cli-uuid/utils/uuid-generator";
 
