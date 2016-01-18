@@ -1,32 +1,15 @@
 ## Ember CLI UUID
 
-This addon adds a hook to your Ember Data Adapter (and all adapters extended from DS.Adapter) to generate the id of each record you create on the client-side.
+This addon adds a hook to your Ember Data Adapter (and all adapters extended from DS.Adapter) to generate the id of each record you create on the client-side. 
 
-This is an npm package that contains the Ember CLI uuid generator for Ember-Data
-library, packaged as an [Ember CLI](https://github.com/stefanpenner/ember-cli)
-Addon.
+The created ids are v4 UUIDs which are random "enough", quoting wikipedia:
+
+> the annual risk of a given person being hit by a meteorite is estimated to be one chance in 17 billion, which means the probability is about 0.00000000006 (6 × 10−11), equivalent to the odds of creating a few tens of trillions of UUIDs in a year and having one duplicate. In other words, only after generating 1 billion UUIDs every second for the next 100 years, the probability of creating just one duplicate would be about 50%.
 
 ## Installation
 
-Ember CLI >= 0.2.3, run
-
 ```
 ember install ember-cli-uuid
-```
-
-in your Ember CLI project's root.
-
-**If you run with Ember CLI >= 0.1.5 && < 0.2.3**
-
-```
-ember install:addon ember-cli-uuid
-```
-
-**If you run with Ember CLI >= 0.0.44 && < 0.1.5**
-
-```
-npm install --save-dev ember-cli-uuid
-ember generate ember-cli-uuid
 ```
 
 ## Usage
