@@ -21,7 +21,7 @@ test('The DS.Adapter.generateIdForRecord now returns proper UUIDs v4', function(
   EmberCliUuidInitializer.initialize(application);
 
   const adapter = new DS.Adapter();
-  const generateIdForRecord = adapter.generateIdForRecord();
+  const generatedUuidForRecord = adapter.generateIdForRecord();
 
-  assert.ok(regexIsUUID.test(generateIdForRecord));
+  assert.ok(regexIsUUID.test(generatedUuidForRecord));
 });
