@@ -10,7 +10,7 @@ The created ids are v4 UUIDs which are random "enough", quoting wikipedia:
 
 ## Installation
 
-```
+```bash
 ember install ember-cli-uuid
 ```
 
@@ -18,18 +18,25 @@ ember install ember-cli-uuid
 
 This Ember CLI module is intended for use with Ember Data. Once you install it (and the blueprint is applied) your ember data models will get a new behaviour when being created on the client-side. When creating a model like that :
 
-```
+```javascript
 store.createRecord('post', {
   title: 'My post'
 });
 ```
 
-Your model will get a v4 (random) UUID as his primary key
+Your model will get a v4 (random) UUID as his primary key :
+
+```javascript
+{
+  id: 'b4301bcb-a687-4f91-86c8-8b9241f6e6bc',
+  title: 'My post'
+}
+```
 
 ### Direct usage
 You can also (if you need a UUID somewhere in your app) use it like that :
 
-```
+```javascript
 import uuid from "ember-cli-uuid/utils/uuid-generator";
 
 uuid(); // -> '6c84fb90-12c4-11e1-840d-7b25c5ee775a'
