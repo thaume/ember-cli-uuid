@@ -28,3 +28,10 @@ ember install:addon ember-cli-uuid
 npm install --save-dev ember-cli-uuid
 ember generate ember-cli-uuid
 ```
+
+## Usage
+```
+import uuid from "ember-cli-uuid/utils/uuid-generator";
+
+uuid(); // -> '6c84fb90-12c4-11e1-840d-7b25c5ee775a'
+```
