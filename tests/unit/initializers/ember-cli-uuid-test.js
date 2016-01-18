@@ -1,12 +1,15 @@
 import Ember from 'ember';
-import { initialize } from 'ember-cli-uuid/initializers/ember-cli-uuid';
+import DS from 'ember-data';
+import EmberCliUuidInitializer from '../../../initializers/ember-cli-uuid';
+import { module, test } from 'qunit';
 
-var container, application;
+let application;
 
-module('EmberCliUuidInitializer', {
-  setup: function() {
+const regexIsUUID = /^[0-9A-F]{8}-[0-9A-F]{4}-4[0-9A-F]{3}-[89AB][0-9A-F]{3}-[0-9A-F]{12}$/i;
+
+module('Unit | Initializer | ember cli uuid', {
+  beforeEach() {
     Ember.run(function() {
-      container = new Ember.Container();
       application = Ember.Application.create();
       application.deferReadiness();
     });
@@ -14,10 +17,12 @@ module('EmberCliUuidInitializer', {
 });
 
 // Replace this with your real tests.
-test('it works', function() {
-  initialize(container, application);
+test('The DS.Adapter.generateIdForRecord now returns proper UUIDs v4', function(assert) {
 
-  // you would normally confirm the results of the initializer here
-  ok(true);
+  EmberCliUuidInitializer.initialize(application);
+
+  const adapter = new DS.Adapter();
+  const generateIdForRecord = adapter.generateIdForRecord();
+
+  assert.ok(regexIsUUID.test(generateIdForRecord));
 });
-
