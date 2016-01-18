@@ -16,7 +16,6 @@ module('Unit | Initializer | ember cli uuid', {
   }
 });
 
-// Replace this with your real tests.
 test('The DS.Adapter.generateIdForRecord now returns proper UUIDs v4', function(assert) {
 
   EmberCliUuidInitializer.initialize(application);
