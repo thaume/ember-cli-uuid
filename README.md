@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.org/thaume/ember-cli-uuid.svg?branch=master)](https://travis-ci.org/thaume/ember-cli-uuid)
 
+Associated blog post : [Using uuids with ember data](http://thau.me/2015/01/using-uuids-with-ember-data/)
+
 This addon adds a hook to your Ember Data Adapter (and all adapters extended from DS.Adapter) to generate the id of each record you create on the client-side.
 
 The created ids are v4 UUIDs which are random "enough", quoting wikipedia:
