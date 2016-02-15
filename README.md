@@ -1,6 +1,7 @@
 ## Ember CLI UUID
 
 [![Build Status](https://travis-ci.org/thaume/ember-cli-uuid.svg?branch=master)](https://travis-ci.org/thaume/ember-cli-uuid)
+[![Ember Observer Score](http://emberobserver.com/badges/ember-cli-uuid.svg)](http://emberobserver.com/addons/ember-cli-uuid)
 
 Associated blog post : [Using uuids with ember data](http://thau.me/2015/01/using-uuids-with-ember-data/)
 
