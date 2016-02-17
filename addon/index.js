@@ -1,5 +1,3 @@
-import uuidHelpers from './utils/uuid-helpers';
-
 export {
-  uuidHelpers
-};
+  uuid
+} from './utils/uuid-helpers';

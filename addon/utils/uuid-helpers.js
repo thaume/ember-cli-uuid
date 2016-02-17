@@ -1,4 +1,5 @@
-export default function uuid() {
+export function uuid() {
   return window.uuid.v4();
 }
 
+export default uuid;
