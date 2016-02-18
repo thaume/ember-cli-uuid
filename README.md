@@ -40,7 +40,8 @@ Your model will get a v4 (random) UUID as his primary key :
 You can also (if you need a UUID somewhere in your app) use it like that :
 
 ```javascript
-import uuid from "ember-cli-uuid/utils/uuid-helpers";
+// The new, cleaner way
+import {uuid} from 'ember-cli-uuid';
 
-uuid(); // -> '6c84fb90-12c4-11e1-840d-7b25c5ee775a'
+uuid(); // 6c84fb90-12c4-11e1-840d-7b25c5ee775a
 ```
