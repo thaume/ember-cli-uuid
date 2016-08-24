@@ -1,5 +1,6 @@
 ## Ember CLI UUID
 
+[![npm version](https://badge.fury.io/js/ember-cli-uuid.svg)](https://badge.fury.io/js/ember-cli-uuid)
 [![Build Status](https://travis-ci.org/thaume/ember-cli-uuid.svg?branch=master)](https://travis-ci.org/thaume/ember-cli-uuid)
 [![Ember Observer Score](http://emberobserver.com/badges/ember-cli-uuid.svg)](http://emberobserver.com/addons/ember-cli-uuid)
 
