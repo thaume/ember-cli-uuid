@@ -1,6 +1,8 @@
 import Ember from 'ember';
 import DS from 'ember-data';
 import { uuid } from 'ember-cli-uuid';
+import ENV from '../config/environment';
+import Configuration from 'ember-cli-uuid/configuration';
 
 export default {
 
@@ -8,10 +10,14 @@ export default {
 
   initialize: function () {
 
+    const config = ENV['ember-cli-uuid'] || {};
+    config.defaultUUID = ENV.defaultUUID;
+    Configuration.load(config);
+
     DS.Adapter.reopen({
 
       generateIdForRecord: function () {
-        return uuid();
+        return Configuration.defaultUUID ? uuid() : null;
       }
 
     });
