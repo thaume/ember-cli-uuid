@@ -2,6 +2,7 @@ import Ember from 'ember';
 import DS from 'ember-data';
 import EmberCliUuidInitializer from '../../../initializers/ember-cli-uuid';
 import { module, test } from 'qunit';
+import Configuration from 'ember-cli-uuid/configuration';
 
 let application;
 
@@ -24,4 +25,17 @@ test('The DS.Adapter.generateIdForRecord now returns proper UUIDs v4', function(
   const generatedUuidForRecord = adapter.generateIdForRecord();
 
   assert.ok(regexIsUUID.test(generatedUuidForRecord));
+});
+
+
+test(`The DS.Adapter.generateIdForRecord does not set a UUID v4 if ENV.['ember-cli-uuid'] is set to false.`, function(assert) {
+
+  EmberCliUuidInitializer.initialize(application);
+
+  Configuration.load({ defaultUUID: false });
+
+  const adapter = new DS.Adapter();
+  const generatedUuidForRecord = adapter.generateIdForRecord();
+
+  assert.notOk(regexIsUUID.test(generatedUuidForRecord));
 });
