@@ -38,6 +38,18 @@ Your model will get a v4 (random) UUID as his primary key :
 }
 ```
 
+### Desactivate the "auto UUID" feature
+You might need to turn off the auto generation of UUIDs on your Ember Data models. To achieve that, you will need to edit your `config/environment.js` file like this :
+
+```javascript
+const ENV = {
+  // ... others config vars
+  'ember-cli-uuid': {
+    defaultUUID: false
+  }
+};
+```
+
 ### Direct usage
 You can also (if you need a UUID somewhere in your app) use it like that :
 
