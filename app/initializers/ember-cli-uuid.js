@@ -8,14 +8,14 @@ export default {
 
   name: 'ember-cli-uuid',
 
-  initialize: function () {
+  initialize() {
 
     const config = ENV['ember-cli-uuid'] || {};
     Configuration.load(config);
 
     DS.Adapter.reopen({
 
-      generateIdForRecord: function () {
+      generateIdForRecord() {
         return Configuration.defaultUUID ? uuid() : null;
       }
 
