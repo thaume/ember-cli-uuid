@@ -11,7 +11,6 @@ export default {
   initialize: function () {
 
     const config = ENV['ember-cli-uuid'] || {};
-    config.defaultUUID = ENV.defaultUUID;
     Configuration.load(config);
 
     DS.Adapter.reopen({
