@@ -54,7 +54,6 @@ const ENV = {
 You can also (if you need a UUID somewhere in your app) use it like that :
 
 ```javascript
-// The new, cleaner way
 import {uuid} from 'ember-cli-uuid';
 
 uuid(); // 6c84fb90-12c4-11e1-840d-7b25c5ee775a
