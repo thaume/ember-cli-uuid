@@ -5,7 +5,7 @@
 [![Ember Observer Score](http://emberobserver.com/badges/ember-cli-uuid.svg)](http://emberobserver.com/addons/ember-cli-uuid)
 [![Code Climate](https://codeclimate.com/github/thaume/ember-cli-uuid/badges/gpa.svg)](https://codeclimate.com/github/thaume/ember-cli-uuid)
 
-Associated blog post : [Using uuids with ember data](http://thau.me/2015/01/using-uuids-with-ember-data/)
+Associated blog post : [Using uuids with ember data](http://thau.me/2015/01/using-uuids-with-ember-data) (warning: old ember version).
 
 This addon adds a hook to your Ember Data Adapter (and all adapters extended from DS.Adapter) to generate the id of each record you create on the client-side.
 
