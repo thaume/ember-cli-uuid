@@ -1,4 +1,4 @@
-/* jshint node: true */
+/* eslint-env node */
 'use strict';
 
 module.exports = {
@@ -7,7 +7,7 @@ module.exports = {
   included: function(app) {
     this._super.included(app);
 
-    this.app.import(app.bowerDirectory + '/node-uuid/uuid.js');
+    this.app.import('node_modules/node-uuid/uuid.js');
   }
 
 };

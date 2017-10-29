@@ -3,6 +3,6 @@ module.exports = {
   },
 
   afterInstall: function() {
-    return this.addBowerPackageToProject('node-uuid', '1.4.1');
+    return this.addPackageToProject('uuid');
   }
 };
