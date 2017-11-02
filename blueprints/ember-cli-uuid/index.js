@@ -3,6 +3,6 @@ module.exports = {
   },
 
   afterInstall: function() {
-    return this.addPackageToProject('uuid');
+    return this.addPackageToProject('node-uuid');
   }
 };
