@@ -5,7 +5,7 @@
 [![Ember Observer Score](http://emberobserver.com/badges/ember-cli-uuid.svg)](http://emberobserver.com/addons/ember-cli-uuid)
 [![Code Climate](https://codeclimate.com/github/thaume/ember-cli-uuid/badges/gpa.svg)](https://codeclimate.com/github/thaume/ember-cli-uuid)
 
-This addon adds a hook to your Ember Data Adapter (and all adapters extended from DS.Adapter) to generate the id of each record you create on the client-side. This hook can be deactivated from your config (see [Deactivate the "auto UUID" feature](#desactivate-the-auto-uuid-feature)).
+This addon adds a hook to your Ember Data Adapter (and all adapters extended from DS.Adapter) to generate the id of each record you create on the client-side. This hook can be deactivated from your config (see [Deactivate the "auto UUID" feature](#deactivate-the-auto-uuid-feature)).
 
 The created ids are v4 UUIDs which are random "enough", quoting wikipedia:
 
