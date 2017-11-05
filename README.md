@@ -5,13 +5,13 @@
 [![Ember Observer Score](http://emberobserver.com/badges/ember-cli-uuid.svg)](http://emberobserver.com/addons/ember-cli-uuid)
 [![Code Climate](https://codeclimate.com/github/thaume/ember-cli-uuid/badges/gpa.svg)](https://codeclimate.com/github/thaume/ember-cli-uuid)
 
-Associated blog post : [Using uuids with ember data](http://thau.me/2015/01/using-uuids-with-ember-data) (warning: old ember version).
-
 This addon adds a hook to your Ember Data Adapter (and all adapters extended from DS.Adapter) to generate the id of each record you create on the client-side.
 
 The created ids are v4 UUIDs which are random "enough", quoting wikipedia:
 
 > the annual risk of a given person being hit by a meteorite is estimated to be one chance in 17 billion, which means the probability is about 0.00000000006 (6 × 10−11), equivalent to the odds of creating a few tens of trillions of UUIDs in a year and having one duplicate. In other words, only after generating 1 billion UUIDs every second for the next 100 years, the probability of creating just one duplicate would be about 50%.
+
+Addon's associated blog post : [Using uuids with ember data](http://thau.me/2015/01/using-uuids-with-ember-data) (warning: old ember version).
 
 ## Installation
 
