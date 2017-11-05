@@ -28,7 +28,7 @@ test('The DS.Adapter.generateIdForRecord now returns proper UUIDs v4', function(
 });
 
 
-test(`The DS.Adapter.generateIdForRecord does not set a UUID v4 if ENV.['ember-cli-uuid'] is set to false.`, function(assert) {
+test(`The DS.Adapter.generateIdForRecord does not set a UUID v4 if ENV['ember-cli-uuid'] is set to false.`, function(assert) {
 
   EmberCliUuidInitializer.initialize(application);
 
