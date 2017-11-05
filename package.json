@@ -1,7 +1,7 @@
 {
   "name": "ember-cli-uuid",
   "version": "0.4.4",
-  "description": "Auto UUIDs for your Ember Data models' primary key.",
+  "description": "Configurable auto-UUIDs for your Ember Data models' that can also be used anywhere else in your app.",
   "keywords": [
     "ember-addon"
   ],
