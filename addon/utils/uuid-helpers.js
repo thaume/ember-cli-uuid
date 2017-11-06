@@ -1,5 +1,7 @@
+import { v4 } from 'uuid';
+
 export function uuid() {
-  return window.uuid.v4();
+  return v4();
 }
 
 export default uuid;
