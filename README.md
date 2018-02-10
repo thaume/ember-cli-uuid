@@ -50,6 +50,19 @@ const ENV = {
 };
 ```
 
+### Use the UUID Adapter mixin as an alternative
+Even with the auto generation of UUID's disabled you still have the option to use the provided adapter to mixin to 
+opt in to UUID generation either globally via an ApplicationAdapter or on an Adapter by Adapter basis. One benefit of 
+creating UUIDs via the adapter mixin is that adapters will still have the feature in both unit and integration tests. 
+You can use the adapter mixin like this:
+
+```javascript
+import AdaptersUuidMixin from 'ember-cli-uuid/mixins/adapters/uuid';
+import DS from 'ember-data';
+
+export default DS.Adapter.extend(AdaptersUuidMixin);
+```
+
 ### Direct usage
 You can also (if you need a UUID v4 somewhere in your app) use it like that :
 
