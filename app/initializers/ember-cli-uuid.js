@@ -1,6 +1,6 @@
 import DS from 'ember-data';
-import { uuid } from 'ember-cli-uuid';
 import ENV from '../config/environment';
+import { generateIdForRecord } from 'ember-cli-uuid/mixins/adapters/uuid';
 import Configuration from 'ember-cli-uuid/configuration';
 
 export default {
@@ -15,7 +15,7 @@ export default {
     DS.Adapter.reopen({
 
       generateIdForRecord() {
-        return Configuration.defaultUUID ? uuid() : null;
+        return Configuration.defaultUUID ? generateIdForRecord(...arguments) : null;
       }
 
     });
