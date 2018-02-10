@@ -1,4 +1,5 @@
-import Ember from 'ember';
+import Application from '@ember/application';
+import { run } from '@ember/runloop';
 import { module, test } from 'qunit';
 import Configuration from 'ember-cli-uuid/configuration';
 
@@ -6,8 +7,8 @@ let application;
 
 module('Unit | Configuration', {
   beforeEach() {
-    Ember.run(function() {
-      application = Ember.Application.create();
+    run(function() {
+      application = Application.create();
       application.deferReadiness();
     });
   },

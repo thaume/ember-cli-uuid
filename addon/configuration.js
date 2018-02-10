@@ -1,6 +1,5 @@
-import Ember from 'ember';
-
-const { getWithDefault, typeOf } = Ember;
+import { getWithDefault } from '@ember/object';
+import { typeOf } from '@ember/utils';
 
 const DEFAULTS = {
   defaultUUID: true

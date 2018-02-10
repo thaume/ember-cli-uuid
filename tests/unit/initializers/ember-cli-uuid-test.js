@@ -1,4 +1,5 @@
-import Ember from 'ember';
+import Application from '@ember/application';
+import { run } from '@ember/runloop';
 import DS from 'ember-data';
 import EmberCliUuidInitializer from '../../../initializers/ember-cli-uuid';
 import { module, test } from 'qunit';
@@ -9,8 +10,8 @@ let application;
 
 module('Unit | Initializer | ember cli uuid', {
   beforeEach() {
-    Ember.run(function() {
-      application = Ember.Application.create();
+    run(function() {
+      application = Application.create();
       application.deferReadiness();
     });
   }
