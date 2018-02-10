@@ -51,7 +51,7 @@ const ENV = {
 ```
 
 ### Use the UUID Adapter mixin as an alternative
-Even with the auto generation of UUID's disabled you still have the option to use the provided adapter to mixin to 
+Even with the auto generation of UUID's disabled you still have the option to use the provided adapter mixin to 
 opt in to UUID generation either globally via an ApplicationAdapter or on an Adapter by Adapter basis. One benefit of 
 creating UUIDs via the adapter mixin is that adapters will still have the feature in both unit and integration tests. 
 You can use the adapter mixin like this:
