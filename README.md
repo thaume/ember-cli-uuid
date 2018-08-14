@@ -13,7 +13,8 @@ The created ids are v4 UUIDs which are random "enough", quoting wikipedia:
 
 Addon's associated blog post : [Using uuids with ember data](http://thau.me/2015/01/using-uuids-with-ember-data) (warning: old ember version).
 
-## Installation
+Installation
+------------------------------------------------------------------------------
 
 ```bash
 ember install ember-cli-uuid
