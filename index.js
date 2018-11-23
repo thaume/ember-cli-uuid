@@ -5,7 +5,7 @@ const path = require('path');
 const Webpack = require('broccoli-webpack');
 
 module.exports = {
-  name: 'ember-cli-uuid',
+  name: require('./package').name,
 
   options: {
     nodeAssets: {

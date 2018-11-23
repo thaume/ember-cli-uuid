@@ -8,34 +8,34 @@ import UUIDTestHelper from '../../helpers/uuid';
 
 let application;
 
-module('Unit | Initializer | ember cli uuid', {
-  beforeEach() {
+module('Unit | Initializer | ember cli uuid', function(hooks) {
+  hooks.beforeEach(function() {
     run(function() {
       application = Application.create();
       application.deferReadiness();
     });
-  }
-});
+  });
 
-test('The DS.Adapter.generateIdForRecord now returns proper UUIDs v4', function(assert) {
+  test('The DS.Adapter.generateIdForRecord now returns proper UUIDs v4', function(assert) {
 
-  EmberCliUuidInitializer.initialize(application);
+    EmberCliUuidInitializer.initialize(application);
 
-  const adapter = new DS.Adapter();
-  const generatedUuidForRecord = adapter.generateIdForRecord();
+    const adapter = new DS.Adapter();
+    const generatedUuidForRecord = adapter.generateIdForRecord();
 
-  assert.ok(UUIDTestHelper.isV4(generatedUuidForRecord));
-});
+    assert.ok(UUIDTestHelper.isV4(generatedUuidForRecord));
+  });
 
 
-test(`The DS.Adapter.generateIdForRecord does not set a UUID v4 if ENV['ember-cli-uuid'] is set to false.`, function(assert) {
+  test(`The DS.Adapter.generateIdForRecord does not set a UUID v4 if ENV['ember-cli-uuid'] is set to false.`, function(assert) {
 
-  EmberCliUuidInitializer.initialize(application);
+    EmberCliUuidInitializer.initialize(application);
 
-  Configuration.load({ defaultUUID: false });
+    Configuration.load({ defaultUUID: false });
 
-  const adapter = new DS.Adapter();
-  const generatedUuidForRecord = adapter.generateIdForRecord();
+    const adapter = new DS.Adapter();
+    const generatedUuidForRecord = adapter.generateIdForRecord();
 
-  assert.notOk(UUIDTestHelper.isV4(generatedUuidForRecord));
+    assert.notOk(UUIDTestHelper.isV4(generatedUuidForRecord));
+  });
 });
