@@ -5,24 +5,25 @@ import Configuration from 'ember-cli-uuid/configuration';
 
 let application;
 
-module('Unit | Configuration', {
-  beforeEach() {
+module('Unit | Configuration', function(hooks) {
+  hooks.beforeEach(function() {
     run(function() {
       application = Application.create();
       application.deferReadiness();
     });
-  },
-  afterEach() {
+  });
+
+  hooks.afterEach(function() {
     Configuration.load({});
-  }
-});
+  });
 
-test('Configuration defaultUUID defaults to `true`', function(assert) {
-  Configuration.load({});
-  assert.equal(Configuration.defaultUUID, true);
-});
+  test('Configuration defaultUUID defaults to `true`', function(assert) {
+    Configuration.load({});
+    assert.equal(Configuration.defaultUUID, true);
+  });
 
-test('Configuration .load sets defaultUUID properly', function(assert) {
-  Configuration.load({ defaultUUID: false });
-  assert.equal(Configuration.defaultUUID, false);
+  test('Configuration .load sets defaultUUID properly', function(assert) {
+    Configuration.load({ defaultUUID: false });
+    assert.equal(Configuration.defaultUUID, false);
+  });
 });
