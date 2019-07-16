@@ -20,7 +20,7 @@ module('Unit | Initializer | ember cli uuid', function(hooks) {
 
     EmberCliUuidInitializer.initialize(application);
 
-    const adapter = new DS.Adapter();
+    const adapter = DS.Adapter.create();
     const generatedUuidForRecord = adapter.generateIdForRecord();
 
     assert.ok(UUIDTestHelper.isV4(generatedUuidForRecord));
@@ -33,7 +33,7 @@ module('Unit | Initializer | ember cli uuid', function(hooks) {
 
     Configuration.load({ defaultUUID: false });
 
-    const adapter = new DS.Adapter();
+    const adapter = DS.Adapter.create();
     const generatedUuidForRecord = adapter.generateIdForRecord();
 
     assert.notOk(UUIDTestHelper.isV4(generatedUuidForRecord));
