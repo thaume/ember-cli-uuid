@@ -78,12 +78,18 @@
     "configPath": "tests/dummy/config"
   },
   "changelog": {
+    "repo": "https://github.com/thaume/",
     "labels": {
       "feature": "New Feature",
       "bug": "Bug Fix"
     }
   },
   "release-it": {
+    "plugins": {
+      "release-it-lerna-changelog": {
+        "infile": "CHANGELOG.md"
+      }
+    },
     "git": {
       "tagName": "v${version}"
     },

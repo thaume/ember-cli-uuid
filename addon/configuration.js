@@ -39,7 +39,10 @@ export default {
 
   load(config) {
     for (let property in this) {
-      if (this.hasOwnProperty(property) && typeOf(this[property]) !== 'function') {
+      if (
+        Object.prototype.hasOwnProperty.call(this, property)
+        && typeOf(this[property]) !== 'function'
+      ) {
         this[property] = getWithDefault(config, property, DEFAULTS[property]);
       }
     }
