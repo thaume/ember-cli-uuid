@@ -1,4 +1,4 @@
-import { getWithDefault } from '@ember/object';
+import { get } from '@ember/object';
 import { typeOf } from '@ember/utils';
 
 const DEFAULTS = {
@@ -43,7 +43,8 @@ export default {
         Object.prototype.hasOwnProperty.call(this, property)
         && typeOf(this[property]) !== 'function'
       ) {
-        this[property] = getWithDefault(config, property, DEFAULTS[property]);
+        const value = get(config, property);
+        this[property] = value === undefined ? DEFAULTS[property] : value;
       }
     }
   }
